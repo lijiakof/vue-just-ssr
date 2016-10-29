@@ -147,21 +147,21 @@ var postAppHTML = layoutSections[1];
 
 server.get('*', function(request, response){
 	var stream = renderer.renderToStream(require('./assets/app')());
-	response.write(preAppHTML);
-	stream.on('data', function (chunk) {
-		response.write(chunk)
-  });
-  
-  stream.on('end', function () {
-    response.end(postAppHTML)
-  });
+        response.write(preAppHTML);
+        stream.on('data', function (chunk) {
+            response.write(chunk)
+    });
+    
+    stream.on('end', function () {
+        response.end(postAppHTML)
+    });
 	
 	stream.on('error', function (error) {
 		console.error(error);
 		
 		return response
-      .status(500)
-      .send('Server Error');
+        .status(500)
+        .send('Server Error');
 	})
 });
 

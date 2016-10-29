@@ -1,0 +1,9 @@
+{
+    "name": "vueserversiderender",
+    "version": "0.1.0",
+    "dependencies": {
+        "express": "^4.14.0",
+        "vue": "^2.0.3",
+        "vue-server-renderer": "^2.0.3"
+    }
+}

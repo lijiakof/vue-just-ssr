@@ -170,5 +170,3 @@ server.listen(5001, function(error){
     console.log('Server is running at localhost:5001');
 })
 ```
-
-
